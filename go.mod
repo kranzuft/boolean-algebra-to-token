@@ -1,4 +1,4 @@
-module github.com/kranzuft/stoc
+module github.com/kranzuft/boolean-algebra-to-tokens
 
 go 1.18
 

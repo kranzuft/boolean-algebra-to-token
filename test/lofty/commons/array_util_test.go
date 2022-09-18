@@ -1,8 +1,8 @@
 package commons
 
 import (
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc/commons"
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc/types"
+	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/commons"
+	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/types"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 	"testing"

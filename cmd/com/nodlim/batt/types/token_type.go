@@ -1,6 +1,6 @@
 // Package types defines types for conditional grammar
-// Defines the rules governing types in stoc, and are the core building block of the condition grammar.
-// stoc is heavily influenced by type-theory.
+// Defines the rules governing types in batt, and are the core building block of the condition grammar.
+// batt is heavily influenced by type-theory.
 // The types are pivotal to the lexer package
 package types
 
@@ -16,7 +16,7 @@ type TokenInfo struct {
 	size int
 }
 
-// TokenType are a set of non-binding descriptors for the syntax of stoc conditions
+// TokenType are a set of non-binding descriptors for the syntax of batt conditions
 const (
 	EOL     TokenType = "END_OF_LINE"
 	UNKNOWN TokenType = "UNKNOWN" // ignore first value

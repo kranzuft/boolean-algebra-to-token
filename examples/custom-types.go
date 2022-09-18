@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc"
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc/types"
+	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/types"
 )
 
 func main() {

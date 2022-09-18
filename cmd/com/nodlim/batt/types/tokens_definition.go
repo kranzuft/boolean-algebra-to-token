@@ -1,8 +1,6 @@
 package types
 
-import (
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc/commons"
-)
+import "github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/commons"
 
 // TokensDefinition A set of definitions for TokenType types.
 // The definition is stored in a TokenInfo object.
@@ -25,7 +23,7 @@ func (td *TokensDefinition) DefineTokenInfo(typ TokenType, key string, descripti
 // Finalise converts the pointer of the td TokensDefinition into a non-pointer object.
 // Primarily a convenience-method that makes defining TokensDefinition cleaner.
 // It is used at the end of a chain of DefineTokenInfo method calls,
-// so that it can be validly passed to a search function, for instance stoc.SearchStringCustom
+// so that it can be validly passed to a search function, for instance batt.SearchStringCustom
 func (td *TokensDefinition) Finalise() TokensDefinition {
 	return *td
 }
@@ -139,7 +137,7 @@ func (td TokensDefinition) TokToString(t TokenType) string {
 
 // prepareDefaultTokensDefinition defines the default TokensDefinition for the library.
 // It is exported by the global DefaultTokensDefinition
-// It is used namely by stoc.SearchString
+// It is used namely by batt.SearchString
 // The code for the method is also the de-facto reference for defining TokensDefinition objects.
 func prepareDefaultTokensDefinition() TokensDefinition {
 	def := TokensDefinition{}

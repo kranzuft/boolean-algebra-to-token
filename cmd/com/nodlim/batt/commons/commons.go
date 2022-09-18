@@ -1,4 +1,3 @@
-// Package commons for generic functions, mainly for string manipulation
 package commons
 
 // LastIndexOf Get the last index of the first element in the array that matches the predicate

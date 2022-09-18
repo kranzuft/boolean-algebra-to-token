@@ -1,9 +1,9 @@
 package lexer
 
 import (
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc/commons"
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc/token_error"
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc/types"
+	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/commons"
+	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/token_error"
+	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/types"
 )
 
 // TokenShuntingAlgorithm Shunting algorithm, based on the mathematical implementation available on the shunting algorithm wiki page

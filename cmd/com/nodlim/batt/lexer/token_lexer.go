@@ -21,8 +21,8 @@
 package lexer
 
 import (
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc/token_error"
-	"github.com/kranzuft/stoc/cmd/com/nodlim/stoc/types"
+	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/token_error"
+	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/types"
 	"strings"
 )
 
