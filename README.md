@@ -1,5 +1,8 @@
 # BATT Boolean Algebra To Tokens
 
+[![Build](https://github.com/kranzuft/boolean-algebra-to-tokens/actions/workflows/goBuild.yml/badge.svg)](https://github.com/kranzuft/boolean-algebra-to-tokens/actions/workflows/goBuild.yml)
+[![Test](https://github.com/kranzuft/boolean-algebra-to-tokens/actions/workflows/goTest.yml/badge.svg)](https://github.com/kranzuft/boolean-algebra-to-tokens/actions/workflows/goTest.yml)
+
 ## Overview
 
 Converts boolean algebra to tokens that can be processed for various purposes.
