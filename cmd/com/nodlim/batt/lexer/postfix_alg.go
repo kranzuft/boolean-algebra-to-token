@@ -2,7 +2,7 @@ package lexer
 
 import (
 	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/commons"
-	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/token_error"
+	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/pos_error"
 	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/types"
 )
 
@@ -41,7 +41,7 @@ import (
 //	    pop the operator from the operator stack onto the output queue.
 //
 // exit.
-func TokenShuntingAlgorithm(toks []types.Token) ([]types.Token, token_error.PosError) {
+func TokenShuntingAlgorithm(toks []types.Token) ([]types.Token, pos_error.PosError) {
 	var parsed []types.Token
 	var operator []types.Token
 	for i, tok := range toks {
@@ -64,7 +64,7 @@ func TokenShuntingAlgorithm(toks []types.Token) ([]types.Token, token_error.PosE
 
 			// If the stack runs out without finding a left parenthesis, then there are mismatched parentheses.
 			if len(operator) == 0 {
-				return parsed, token_error.New("shunting error, missing right bracket", i)
+				return parsed, pos_error.New("shunting error, missing right bracket", i)
 			} else if operator[len(operator)-1].Typ == types.LBR {
 				operator = operator[:endIndex(operator)]
 			}
@@ -80,7 +80,7 @@ func TokenShuntingAlgorithm(toks []types.Token) ([]types.Token, token_error.PosE
 			lastBR := commons.LastIndexOf(toks, func(t types.Token) bool {
 				return t.Typ == types.LBR || t.Typ == types.RBR
 			})
-			return parsed, token_error.New("shunting error, some brackets were not matched together", lastBR)
+			return parsed, pos_error.New("shunting error, some brackets were not matched together", lastBR)
 		}
 		parsed = append(parsed, opI)
 	}

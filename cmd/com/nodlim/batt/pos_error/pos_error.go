@@ -1,5 +1,5 @@
-// Package token_error error handling
-package token_error
+// Package pos_error error handling
+package pos_error
 
 import "errors"
 
