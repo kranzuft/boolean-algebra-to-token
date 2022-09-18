@@ -1,13 +1,12 @@
 package main
 
 import (
-	"fmt"
 	"github.com/kranzuft/boolean-algebra-to-tokens/cmd/com/nodlim/batt/types"
 )
 
 func main() {
 	def := types.TokensDefinition{}
-	customTypes := def.DefineTokenInfo(types.AND, "and", "and").
+	def.DefineTokenInfo(types.AND, "and", "and").
 		DefineTokenInfo(types.OR, "or", "or").
 		DefineTokenInfo(types.NOT, "not", "not").
 		DefineTokenInfo(types.ANDNOT, "and not", "and not").
@@ -20,14 +19,4 @@ func main() {
 		DefineTokenInfo(types.DQUOTE, "\"", "double inverted comma").
 		DefineTokenInfo(types.SQUOTE, "'", "single inverted comma").
 		Finalise()
-	success, err := stoc.SearchStringCustom(customTypes, "Hello or hi", "Hello world")
-	if err == nil {
-		if success {
-			fmt.Println("Success")
-		} else {
-			fmt.Println("Fail")
-		}
-	} else {
-		fmt.Println(err)
-	}
 }
