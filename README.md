@@ -1,12 +1,8 @@
 # BATT Boolean Algebra To Tokens
 
-[![Build](https://github.com/kranzuft/stoc/actions/workflows/goBuild.yml/badge.svg)](https://github.com/kranzuft/stoc/actions/workflows/goBuild.yml)
-[![Test](https://github.com/kranzuft/stoc/actions/workflows/goTest.yml/badge.svg)](https://github.com/kranzuft/stoc/actions/workflows/goTest.yml)
-
 ## Overview
 
-Bridges the gap between simple searching on a single string, and more powerful search using regex.
-Plain english and simple boolean algebra is used.
+Converts boolean algebra to tokens that can be processed for various purposes.
 
 ## Dependencies
 
@@ -75,17 +71,3 @@ func main() {
 ## RoadMap
 
 - escaping quotes in expressions
-- some way to make strings case-sensitive and case-insensitive, likely using a character in front of the expression, similar to python 3's f string
-- the reference app (command line) (WIP, see Frontends)
-- match support (return a list of points where a match was found, for highlighting)
-- context support (include lines before and after a matched line)
-
-## Potential additions (still considering)
-
-- overriding keywords e.g. \& or \and to override keywords when not using quotes (might be overkill)
-- might be good to include basic regex concepts like \w\d\s word, digit, whitespace \W\D\S not word, digit,
-  whitespace, and potentially ^ and $
-
-## Frontends
-
-https://github.com/kranzuft/stoc-cli (reference implementation)
